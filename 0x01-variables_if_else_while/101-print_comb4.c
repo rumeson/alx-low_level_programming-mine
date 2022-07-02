@@ -29,15 +29,14 @@ int main(void)
 						putchar(' ');
 					}
 				}
-
 				c++;
 			}
-
 			c = '0';
 			b++;
 		}
-
 		b = '0';
 		a++;
 	}
+	putchar('\n');
+	return (0);
 }
