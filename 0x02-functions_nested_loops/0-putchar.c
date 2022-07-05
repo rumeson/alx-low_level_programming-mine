@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _printputchar - prints "_putchar"
+ * main - Entry point prints "_putchar"
  *
  * Return: Nothing
  */
 
-int printputchar(void)
+int main(void)
 {
 	char a[] = "_putchar";
 	int j;
