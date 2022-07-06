@@ -48,6 +48,14 @@ void divide_modulo(int a)
 		_putchar((-a / 10) + '0');
 		_putchar((-a % 10) + '0');
 	}
+
+	else if (a <= -99 && a >= -999)
+	{
+		_putchar('-');
+		_putchar((-a / 100) + '0');
+		_putchar(((-a % 100) / 10) + '0');
+		_putchar(((-a % 100) % 10) + '0');
+	}
 }
 
 void comma_space(void)
