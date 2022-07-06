@@ -19,20 +19,40 @@ void times_table(void)
 			int b = (a / 10);
 			int c = (a % 10);
 
-			if (a == 0)
-				_putchar(c + '0');
+			if (a == 0 && i == 0)
+				_putchar(a + '0');
 
-			else if (a < 9)
-				_putchar(c + '0');
-
-			else if (a > 9)
+			else if (a == 0 && i != 0)
 			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(c + '0');
+			}
+
+			else if (a < 9 && i != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(c + '0');
+			}
+
+			else if (a > 9 && i != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar(b + '0');
 				_putchar(c + '0');
 			}
 
-			else
+			else if (a == 9 && i != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(a + '0');
+			}
 		}
 
 		_putchar('\n');
