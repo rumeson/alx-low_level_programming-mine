@@ -3,20 +3,16 @@
 /**
  * print_to_98 - print all natural numbers to 98
  *
- * divide_modulo - divides and modulos by 10
- * comma_space - adds comma and space after number
+ * Description: a_under_98 with parameter a prints numbers
+ * under 98
+ * divide_modulo: divides and modulos by 10
+ * comma_space: adds comma and space after number
  *
  * @n: number to start print from
  * @a: integer parameter for divide_modulo function
  *
  * Return: Nothing
  */
-
-void a_equal_98(int a)
-{
-	_putchar((a / 10) + '0');
-	_putchar((a % 10) + '0');
-}
 
 void a_under_98(int a)
 {
@@ -35,7 +31,8 @@ void divide_modulo(int a)
 {
 	if (a == 98)
 	{
-		a_equal_98(a);
+		_putchar((a / 10) + '0');
+		_putchar((a % 10) + '0');
 	}
 
 	else if (a <= 9 && a >= 0)
