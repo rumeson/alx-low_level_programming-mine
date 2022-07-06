@@ -12,12 +12,30 @@
  * Return: Nothing
  */
 
+void a_equal_98(int a)
+{
+	_putchar((a / 10) + '0');
+	_putchar((a % 10) + '0');
+}
+
+void a_under_98(int a)
+{
+	_putchar((a / 10) + '0');
+	_putchar((a % 10) + '0');
+}
+
+void a_over_100(int a)
+{
+	_putchar((a / 100) + '0');
+	_putchar(((a % 100) / 10) + '0');
+	_putchar(((a % 100) % 10) + '0');
+}
+
 void divide_modulo(int a)
 {
 	if (a == 98)
 	{
-		_putchar((a / 10) + '0');
-		_putchar((a % 10) + '0');
+		a_equal_98(a);
 	}
 
 	else if (a <= 9 && a >= 0)
@@ -25,15 +43,12 @@ void divide_modulo(int a)
 
 	else if (a <= 99 && a >= 0)
 	{
-		_putchar((a / 10) + '0');
-		_putchar((a % 10) + '0');
+		a_under_98(a);
 	}
 
 	else if (a <= 999 && a >= 0)
 	{
-		_putchar((a / 100) + '0');
-		_putchar(((a % 100) / 10) + '0');
-		_putchar(((a % 100) % 10) + '0');
+		a_over_100(a);
 	}
 
 	else if (a <= 0 && a >= -9)
