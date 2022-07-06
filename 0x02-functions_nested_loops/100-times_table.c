@@ -20,14 +20,12 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(' ');
 				_putchar(((a * b) / 10) + '0');
 				_putchar(((a * b) % 10) + '0');
 			}
 			else if ((a * b) > 99 && (a * b) <= 999)
 			{
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 				_putchar(((a * b) / 100) + '0');
 				_putchar((((a * b) % 100) / 10) + '0');
@@ -51,7 +49,7 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(' '); _putchar(' ');
+					_putchar(' ');
 					_putchar((a * b) + '0');
 				}
 			}
