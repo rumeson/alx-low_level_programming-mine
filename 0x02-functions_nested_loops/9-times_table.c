@@ -8,54 +8,44 @@
 
 void times_table(void)
 {
-/*	int a = '1';*/
-	char i, j;
+	int i, j;
 
 	for (j = 0; j < 10; j++)
 	{
 		for (i = 0; i < 10; i++)
 		{
-			int a = (i * j);
-			int b = (a / 10);
-			int c = (a % 10);
-
-			if (a == 0 && i == 0)
-				_putchar(a + '0');
-
-			else if (a == 0 && i != 0)
+			if ((i * j) == 0 && i == 0)
+				_putchar((i * j) + '0');
+			else if ((i * j) == 0 && i != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(c + '0');
+				_putchar(((i * j) % 10) + '0');
 			}
-
-			else if (a < 9 && i != 0)
+			else if ((i * j) < 9 && i != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(c + '0');
+				_putchar(((i * j) % 10) + '0');
 			}
-
-			else if (a > 9 && i != 0)
+			else if ((i * j) > 9 && i != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(b + '0');
-				_putchar(c + '0');
+				_putchar(((i * j) / 10) + '0');
+				_putchar(((i * j) % 10) + '0');
 			}
-
-			else if (a == 9 && i != 0)
+			else if ((i * j) == 9 && i != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(a + '0');
+				_putchar((i * j) + '0');
 			}
 		}
 
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
