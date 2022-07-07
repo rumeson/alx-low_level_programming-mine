@@ -9,14 +9,15 @@
 
 int main(void)
 {
-	int i, a = 1, b = 2, c;
+	int i, a = 1, b = 2;
+	unsigned long c;
 
 	printf("%d, %d, ", 1, 2);
 
 	for (i = 0; i < 50; i++)
 	{
 		c = a + b;
-		printf("%d, ", c);
+		printf("%lu, ", c);
 		a = b;
 		b = c;
 	}
