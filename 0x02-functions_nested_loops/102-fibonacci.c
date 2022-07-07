@@ -16,7 +16,10 @@ int main(void)
 	for (i = 0; i < 48; i++)
 	{
 		c = a + b;
-		printf("%lu, ", c);
+		if (i == 47)
+			printf("%lu", c);
+		else
+			printf("%lu, ", c);
 		a = b;
 		b = c;
 	}
