@@ -9,17 +9,16 @@
 
 int main(void)
 {
-	int n = 1024;
 	int sum = 0;
-	int a, b, i;
+	int i;
 
 	for (i = 0; i < 1024; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
-			a = a + i;
+			sum = sum + i;
 	}
 
-	printf("%d\n", a);
+	printf("%d\n", sum);
 
 	return (0);
 }
