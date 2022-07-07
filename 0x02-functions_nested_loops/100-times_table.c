@@ -4,6 +4,8 @@
  * print_times_table - prints the timetable
  * of given parameter
  *
+ * @n: print times table of this integer
+ *
  * Return: Nothing
  */
 
