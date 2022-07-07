@@ -1,105 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_to_98 - print all natural numbers to 98
+ * print_to_98 - print all natural numbers from n to 98.
  *
- * Description: a_under_98 with parameter a prints numbers
- * under 98
- * divide_modulo: divides and modulos by 10
- * comma_space: adds comma and space after number
+ * @n: the number to start counting from to 98
  *
- * @n: number to start print from
- * @a: integer parameter for divide_modulo function
+ * Return: void returns nothing.
  *
- * Return: Nothing
  */
-
-void a_under_98(int a)
-{
-	_putchar((a / 10) + '0');
-	_putchar((a % 10) + '0');
-}
-
-void a_over_100(int a)
-{
-	_putchar((a / 100) + '0');
-	_putchar(((a % 100) / 10) + '0');
-	_putchar(((a % 100) % 10) + '0');
-}
-
-void divide_modulo(int a)
-{
-	if (a == 98)
-	{
-		_putchar((a / 10) + '0');
-		_putchar((a % 10) + '0');
-	}
-
-	else if (a <= 9 && a >= 0)
-		_putchar((a % 10) + '0');
-
-	else if (a <= 99 && a >= 0)
-	{
-		a_under_98(a);
-	}
-
-	else if (a <= 999 && a >= 0)
-	{
-		a_over_100(a);
-	}
-
-	else if (a <= 0 && a >= -9)
-	{
-		_putchar('-');
-		_putchar((-a % 10) + '0');
-	}
-
-	else if (a <= -9 && a >= -99)
-	{
-		_putchar('-');
-		_putchar((-a / 10) + '0');
-		_putchar((-a % 10) + '0');
-	}
-
-	else if (a <= -99 && a >= -999)
-	{
-		_putchar('-');
-		_putchar((-a / 100) + '0');
-		_putchar(((-a % 100) / 10) + '0');
-		_putchar(((-a % 100) % 10) + '0');
-	}
-}
-
-void comma_space(void)
-{
-	_putchar(',');
-	_putchar(' ');
-}
 
 void print_to_98(int n)
 {
-	if (n == 98)
-		divide_modulo(n);
-
-	else if (n < 98)
+	if (n < 98)
 	{
-		for (; n <= 98; n++)
-		{
-			divide_modulo(n);
-			if (n != 98)
-				comma_space();
-		}
+		for (n = n; n < 98; n++)
+			printf("%d, ", n);
+		printf("%d\n", 98);
 	}
-
-	else if (n > 98)
+	else
 	{
-		for (; n >= 98; n--)
-		{
-			divide_modulo(n);
-
-			if (n != 98)
-				comma_space();
-		}
+		for (n = n; n > 98; n--)
+			printf("%d, ", n);
+		printf("%d\n", 98);
 	}
-	_putchar('\n');
 }
