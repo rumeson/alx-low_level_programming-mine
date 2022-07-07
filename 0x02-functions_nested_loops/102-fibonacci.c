@@ -9,10 +9,9 @@
 
 int main(void)
 {
-	int i, a = 1, b = 2;
-	unsigned long c;
+	unsigned long i, a = 1, b = 2, c;
 
-	printf("%d, %d, ", 1, 2);
+	printf("%lu, %lu, ", a, b);
 
 	for (i = 0; i < 50; i++)
 	{
