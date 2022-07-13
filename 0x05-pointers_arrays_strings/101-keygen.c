@@ -44,6 +44,7 @@ int main(void)
 		}
 		
 		printf("%s", password);
-		return (0);
 	}
+	return (0);
 }
+
