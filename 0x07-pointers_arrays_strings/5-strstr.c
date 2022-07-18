@@ -29,8 +29,6 @@ char *_strstr(char *haystack, char *needle)
 	{
 		j = 0;
 		n = i;
-		if (*(haystack + i) == ' ')
-			continue;
 		if (*(needle + j) != *(haystack + i))
 			continue;
 		for ( ; j < len_n; j++)
