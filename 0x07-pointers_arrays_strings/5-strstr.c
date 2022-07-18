@@ -36,7 +36,7 @@ char *_strstr(char *haystack, char *needle)
 			if (*(needle + j) != *(haystack + n))
 				break;
 		}
-		return (&haystack[i]);
+		return (&haystack[i + 1]);
 
 	}
 	return (NULL);
