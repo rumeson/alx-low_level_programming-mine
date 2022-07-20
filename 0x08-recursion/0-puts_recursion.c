@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _puts_recursion - recursive function
+* print_recur - recursive function
 * @n: pointer to string
 *
 * Return: Nothing
