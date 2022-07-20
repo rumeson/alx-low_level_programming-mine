@@ -9,10 +9,10 @@
 
 int len_num(char *str)
 {
-	if (*str == 0)
+	if (*str == '\0')
 		return (0);
 	else
-		return 1 + (len_num(str++));
+		return (1 + len_num(str + 1));
 }
 
 /**
