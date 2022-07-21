@@ -1,39 +1,36 @@
 #include "main.h"
-#include <stdio.h>
-/**
-* sqrt_recur - recur squareroot
-* @sq_rt: square root number
-* @n: given number
-*
-* Return: square root
-*/
 
-int _sqrt_recur(int n, int sq_rt)
-{
-	if ((sq_rt * sq_rt) == n)
-		return (0);
-	else if ((sq_rt * sq_rt) > n)
-		return (0);
-	else
-		return (1 + _sqrt_recur(n, sq_rt++));
-}
+int get_sqrt(int n, int possible_root);
 
 /**
-* _sqrt_recursion - function that returns
-* the natural square root of a number
-* @n: number
-*
-* Return: the square root of number
-*/
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: the number
+ *
+ * Return: returns the natural square root of a number.
+ */
 
 int _sqrt_recursion(int n)
 {
-	int sq_rt = 0;
+	return (get_sqrt(n, 1));
+}
 
-	if (n <= 0)
-		return (-1);
-	else
-		/*sq_rt = (1 + _sqrt_recur(n, sq_rt++));*/
-		printf("test sqrt : %d\n", (1 + _sqrt_recur(n, sq_rt++)));
-	return (0);
+/**
+ * get_sqrt - tries to get the square root of n by continously
+ * comparing the square of 'possible_root' to n
+ * @n: the number
+ * @possible_root: a possible root of n
+ *
+ * Return: square root of n, -1 otherwise
+ */
+
+int get_sqrt(int n, int possible_root)
+{
+	int square = possible_root * possible_root;
+
+	if (square == n)
+		return (possible_root);
+	if (square < n)
+		return (get_sqrt(n, ++possible_root));
+
+	return (-1);
 }
