@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints all arguments it receives.
+ * main - multiplies two numbers.
  * @argc: argument count
  * @argv: arguments
  *
@@ -11,19 +11,17 @@
 
 int main(int argc, char **argv)
 {
-	int i;
-	int res = 1;
+	int x, y;
 
-	if (argc == 3)
+	if (argc < 3)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			res = res * atoi(argv[i]);
-		}
-		printf("%d\n", res);
-	}
-	else
 		printf("Error\n");
+		return (1);
+	}
 
-	return (1);
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	printf("%d\n", x * y);
+
+	return (0);
 }
