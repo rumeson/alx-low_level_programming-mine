@@ -26,15 +26,15 @@ char *_strdup(char *str)
 	str = str - len;
 	new_s = malloc(sizeof(*str) * len);
 
-	for (i = 0; i < len; i++)
-	{
-		new_s[i] = *(str + i);
-	}
-
 	if (str == NULL)
 		return (NULL);
 	else if (new_s == NULL)
 		return (NULL);
+
+	for (i = 0; i < len; i++)
+	{
+		new_s[i] = *(str + i);
+	}
 
 	return (&(new_s[0]));
 }
