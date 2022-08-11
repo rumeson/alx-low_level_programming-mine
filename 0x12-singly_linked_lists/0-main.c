@@ -5,7 +5,6 @@
 *
 * Return: Always 0.
 */
-
 int main(void)
 {
 	list_t *head;
@@ -17,36 +16,22 @@ int main(void)
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
-	printf("Error\n");
-	return (1);
+		printf("Error\n");
+		return (1);
 	}
 	new->str = strdup("Hello");
-new->len = 5;
+	new->len = 5;
+	new->next = head;
+	head = new;
+	n = print_list(head);
+	printf("-> %lu elements\n", n);
 
-new->next = head;
+	printf("\n");
+	free(new->str);
+	new->str = NULL;
+	n = print_list(head);
+	printf("-> %lu elements\n", n);
 
-head = new;
-
-n = print_list(head);
-
-printf("-> %lu elements\n", n);
-
-
-
-printf("\n");
-
-free(new->str);
-
-new->str = NULL;
-
-n = print_list(head);
-
-printf("-> %lu elements\n", n);
-
-
-
-free(new);
-
-return (0);
-
+	free(new);
+	return (0);
 }
